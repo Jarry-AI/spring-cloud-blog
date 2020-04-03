@@ -1,8 +1,0 @@
-/*
-*员工系统的一个测试
-*/
-class Test{
-  public static void main(String[] args){
-    System.out.println("test");
-  }
-}
