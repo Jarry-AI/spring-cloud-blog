@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.easyexcel.mapper.BksStudentTestscoreMapper">
+    <insert id="insertScore" parameterType="java.util.List">
+        INSERT INTO bks_student_testscore2
+          (id,student_code,student_id,name,district,school,exam_name,school_years,subject_yuwen,subject_shuxue,
+          subject_yingyu,subject_wuli,subject_lishi,subject_dili,subject_huaxue,subject_shengwu,subject_zhenzhi,
+          subject_comb,gmt_create,gmt_modified,operator_id,operator_name,remark,class_name,subject_dili_new,
+          subject_shengwu_new,subject_huaxue_new,subject_zhenzhi_new,is_new,is_check,my_score,grade_name)
+        values 
+          <foreach collection="list" item="score" index="index" separator=",">
+              (
+              #{score.id},#{score.studentCode},#{score.studentId},#{score.name},#{score.district},#{score.school},
+              #{score.examName},#{score.schoolYears},#{score.subjectYuwen},#{score.subjectShuxue},#{score.subjectYingyu},#{score.subjectWuli},
+              #{score.subjectLishi},#{score.subjectDili},#{score.subjectHuaxue},#{score.subjectShengwu},#{score.subjectZhenzhi},#{score.subjectComb},
+              #{score.gmtCreate},#{score.gmtModified},#{score.operatorId},#{score.operatorName},#{score.remark},#{score.className},
+              #{score.subjectDiliNew},#{score.subjectShengwuNew},#{score.subjectHuaxueNew},#{score.subjectZhenzhiNew},#{score.isNew},#{score.isCheck},
+              #{score.myScore},#{score.gradeName}
+              )
+          </foreach>
+    </insert>
+</mapper>
