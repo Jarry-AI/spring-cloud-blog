@@ -2,6 +2,7 @@ package com.example.easyexcel.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,6 +18,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor                 //无参构造
 @AllArgsConstructor
+@Builder
 public class User implements Serializable {
     private static final long serialVersionUID = -5144055068797033748L;
     /**
@@ -53,7 +55,7 @@ public class User implements Serializable {
      * 创建时间
      */
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT-8")
-    private Date createdTime;
+    private LocalDateTime createdTime;
     /**
      * 创建人用户名
      */
@@ -62,7 +64,7 @@ public class User implements Serializable {
      * 更新时间
      */
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT-8")
-    private Date updatedTime;
+    private LocalDateTime updatedTime;
     /**
      * 更新人用户名
      */

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Excel数据导入导出</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+</head>
+<body>
+    <!--<form id="dataForm" action="/excel/import" method="post" enctype="multipart/form-data">-->
+        <!--<input type="file" name="file">-->
+        <!--<input type="submit" value="开始导入">-->
+    <!--</form>-->
+    <div class="layuimini-container">
+        <div class="layuimini-main">
+            <div class="layui-inline" align="left">
+                <div style="display: inline-block; float:left; margin-bottom: 20px;">
+                    <span style="display: inline-block; width: auto;font-size: 28px;">学生成绩数据导入与处理</span>
+                </div>
+            </div>
+            <div class="layui-form" lay-filter="form" id="dataCenter">
+                <div class="layui-input-inline" style="float: left;width: 100px;">
+                    <input type="text" name="operatorName" class="layui-input" id="operatorName" placeholder="操作人">
+                </div>
+                <div class="layui-input-inline" style="float: left;width: 200px; margin-left: 15px;margin-right: 15px;">
+                    <input type="text" name="createTime" class="layui-input" id="createTime" placeholder="选择学校">
+                    <input type="hidden" name="type" value="3">
+                </div>
+                <div class="layui-inline">
+                    <button type="submit" lay-submit="" lay-filter="search"class="layui-btn layui-btn-normal">搜索</button>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-upload">
+                        <a type="button" class="layui-btn layui-btn-sm" id="uploadExcel" style="float: left;margin-right: 20px;">选择excel文件</a>
+                        <a type="button" class="layui-btn layui-btn-sm" id="beginUpload"><i class="layui-icon"></i>点击上传文件</a>
+                        <font id="fileName" style="color: blue" size="2"></font>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <!--<label class="layui-form-label layui-required">选择文件</label>-->
+                <!--<div class="layui-upload">-->
+                    <!--<a type="button" class="layui-btn layui-btn-sm" id="uploadExcel" style="float: left;margin-right: 20px;">选择excel文件</a>-->
+                    <!--<a type="button" class="layui-btn layui-btn-sm" id="beginUpload"><i class="layui-icon"></i>点击上传文件</a>-->
+                    <!--<font id="fileName" style="color: blue" size="2"></font>-->
+                <!--</div>-->
+                <!--<div class="layui-input-block" style="margin-top: 10px;">-->
+                    <!--<font style="color: red" size="3">支持的文件格式:pdf,docx,doc,xls,xlsx,jpg,png</font>-->
+                <!--</div>-->
+            </div>
+            <table class="layui-hide" id="currentTableId" lay-filter="currentTableFilter"></table>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form', 'table','upload'], function() {
+        var $ = layui.jquery,
+            form = layui.form,
+            upload = layui.upload,
+            table = layui.table;
+        var uploadListIns = upload.render({
+            elem: '#uploadExcel'
+            ,url: '/dataProcessing/import', //改成您自己的上传接口
+            accept: 'file',
+            data:{types:3},
+            exts: "pdf|docx|doc|xls|xlsx|jpg|png"
+            ,auto: false
+            ,bindAction: '#beginUpload',
+            before: function(obj){
+                obj.preview(function(index, file, result){
+                    $("#fileName").val(file.name);
+                });
+            }
+            ,done: function(res){
+                alert(res)
+            },
+            error: function (res) {
+
+            }
+
+        })
+    })
+
+</script>
+
+
+</html>
