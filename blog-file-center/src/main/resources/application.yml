@@ -1,0 +1,17 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: service-file
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#≈‰÷√∞¢¿Ô‘∆oss
+aliyun:
+  oss:
+    flag: false
+    endpoint: oss-cn-zhangjiakou.aliyuncs.com
+    accessKeyId: LTAI4Fq7FqnqNVAoZoUTNDhm
+    accessKeySecret: 6apoFPyNoEQKv9ddCexpGLCiboQpG6
+    bucketName: zfqxy007

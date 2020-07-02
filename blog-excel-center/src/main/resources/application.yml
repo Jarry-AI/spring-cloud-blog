@@ -76,9 +76,11 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
-#日志
+# 日志
 logging:
   pattern:
     console: "%d - %msg%n"
   file:
     path: "E:/testLog"
+# Elasticsearch分布式搜索和分析引擎
+

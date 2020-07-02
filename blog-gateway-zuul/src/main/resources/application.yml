@@ -11,8 +11,11 @@ eureka:
 zuul:
   routes:
     cloud-web:
-      path : /web/**
+      path: /web/**
       serviceId: service-web
-    cloud-employee:
-      path : /excel/**
-      serviceId : service-excel
+    cloud-excel:
+      path: /excel/**
+      serviceId: service-excel
+    cloud-file:
+      path: /file/**
+      serviceId: service-file

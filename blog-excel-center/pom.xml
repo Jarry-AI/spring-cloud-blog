@@ -47,6 +47,8 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--elasticsearch-->
+
         <!--eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
