@@ -1,0 +1,13 @@
+server:
+  port: 9000
+#spring:
+#  application:
+#    name: service-file
+#配置阿里云oss
+aliyun:
+#  oss:
+#    flag: false
+#    endpoint: oss-cn-zhangjiakou.aliyuncs.com
+#    accessKeyId: LTAI4GK6njbZ4bMhYjwruzgc
+#    accessKeySecret: 4wC4Zio8nTDejRqiFXtPpATZmSrN7O
+#    bucketName: zfqxy007
