@@ -4,7 +4,7 @@ server:
 #  application:
 #    name: service-file
 #配置阿里云oss
-aliyun:
+#aliyun:
 #  oss:
 #    flag: false
 #    endpoint: oss-cn-zhangjiakou.aliyuncs.com
