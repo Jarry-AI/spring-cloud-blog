@@ -8,8 +8,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * @author liushuangqing
- * @description CopyUtil
+ * description CopyUtil
  * @date 2020/1/17
  */
 public class CopyUtils {

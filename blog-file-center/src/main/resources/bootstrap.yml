@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: file-center
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-center
+      profile: dev
+      fail-fast: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

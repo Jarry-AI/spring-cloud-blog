@@ -1,14 +1,14 @@
 server:
-  port: 9001
+  port: 8080
 # DataSource Config
 spring:
-  application:
-    name: service-excel
-  servlet:
-    multipart:
-      enabled: true
-      max-file-size: 50MB
-      max-request-size: 100MB
+#  application:
+#    name: service-excel
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-file-size: 50MB
+#      max-request-size: 100MB
   # 数据源配置
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -45,10 +45,10 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     # 合并多个DruidDataSource的监控数据
     #spring.datasource.useGlobalDataSourceStat=true
-eureka:
-  client:
-    service-url:
-      defaultZone : http://localhost:8761/eureka/
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone : http://localhost:8761/eureka/
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔

@@ -1,0 +1,11 @@
+logging:
+  level:
+    root: info
+    com.cloud: debug
+  file: logs/${spring-application-name}.log
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://rm-8vb72vma1h4f5ucle6o.mysql.zhangbei.rds.aliyuncs.com:3306/cloud_user?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    username: admin001
+    password: 105422qq

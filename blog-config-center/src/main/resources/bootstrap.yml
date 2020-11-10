@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-center
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configs/{profile}
+server:
+  port: 9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+

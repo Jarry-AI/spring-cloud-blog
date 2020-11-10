@@ -8,6 +8,6 @@ server:
 #  oss:
 #    flag: false
 #    endpoint: oss-cn-zhangjiakou.aliyuncs.com
-#    accessKeyId: LTAI4GK6njbZ4bMhYjwruzgc
-#    accessKeySecret: 4wC4Zio8nTDejRqiFXtPpATZmSrN7O
-#    bucketName: zfqxy007
+#    accessKeyId:
+#    accessKeySecret:
+#    bucketName:

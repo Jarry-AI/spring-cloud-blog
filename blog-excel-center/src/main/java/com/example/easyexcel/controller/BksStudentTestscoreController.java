@@ -1,6 +1,7 @@
 package com.example.easyexcel.controller;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,9 +20,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/student")
 public class BksStudentTestscoreController {
 
+    @Value("${words}")
+    private String words;
+
+
     @GetMapping("/get")
     public String get(@RequestParam String name){
-        return "my name is" + name;
+        return "hello," + name + "," + this.words;
+    }
+
+    @GetMapping("/exception")
+    public void exception() throws Exception{
+        throw new Exception("系统异常");
     }
 }
 
