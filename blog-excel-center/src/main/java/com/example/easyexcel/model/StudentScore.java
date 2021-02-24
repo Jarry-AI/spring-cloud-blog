@@ -1,6 +1,8 @@
 package com.example.easyexcel.model;
 
 import com.alibaba.excel.annotation.ExcelProperty;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 /**
@@ -10,6 +12,10 @@ import lombok.Data;
  */
 @Data
 public class StudentScore {
+
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
+    private Integer id;
+
     /**
      * 学籍号
      */

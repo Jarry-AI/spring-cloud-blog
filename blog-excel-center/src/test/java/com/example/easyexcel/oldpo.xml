@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<purchaseOrder orderDate="1999-10-20">
+    <comment>Hurry, my lawn is going wild!</comment>
+    <items>
+        <item partNum="872-AA">
+            <productName>Lawnmower</productName>
+            <quantity><![CDATA[1]]></quantity>
+            <USPrice>148.95</USPrice>
+            <comment>Confirm this is electric</comment>
+        </item>
+        <item partNum="926-AA">
+            <productName>Baby Monitor</productName>
+            <quantity>1</quantity>
+            <USPrice>39.98</USPrice>
+            <shipDate>1999-05-21</shipDate>
+        </item>
+    </items>
+</purchaseOrder>

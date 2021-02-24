@@ -80,7 +80,7 @@ public class CodeGenerator {
          String templatePath = "/templates/mapper.xml.vm";
 
         // 自定义输出配置
-        List<FileOutConfig> focList = new ArrayList<>();
+        List<FileOutConfig> focList = new ArrayList();
         // 自定义配置会被优先输出
         focList.add(new FileOutConfig(templatePath) {
             @Override

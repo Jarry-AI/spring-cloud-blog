@@ -1,7 +1,14 @@
 server:
-  port: 8080
+  port: 8098
 # DataSource Config
 spring:
+
+  ### redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
 #  application:
 #    name: service-excel
 #  servlet:
@@ -11,8 +18,8 @@ spring:
 #      max-request-size: 100MB
   # 数据源配置
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/excel_test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
     username: root
     password: root
 #   180数据库
@@ -78,9 +85,11 @@ mybatis-plus:
     cache-enabled: false
 # 日志
 logging:
-  pattern:
-    console: "%d - %msg%n"
-  file:
-    path: "E:/testLog"
+#  pattern:
+#    console: "%d - %msg%n"
+#  file:
+#    path: "E:/testLog"
+  level:
+    com.example.easyexcel.mapper : debug
 # Elasticsearch分布式搜索和分析引擎
 
