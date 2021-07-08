@@ -4,11 +4,11 @@ server:
 spring:
 
   ### redis
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    password:
-    database: 0
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    password:
+#    database: 0
 #  application:
 #    name: service-excel
 #  servlet:
@@ -19,9 +19,9 @@ spring:
   # 数据源配置
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/user_db?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
     username: root
-    password: root
+    password: 123456
 #   180数据库
 #    url: jdbc:mysql://49.4.6.180:3306/mws-bks?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
 #    username: root
@@ -59,7 +59,7 @@ spring:
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.benwunet.bks.model
+  typeAliasesPackage: com.example.easyexcel.model
   global-config:
     #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
     id-type: 0

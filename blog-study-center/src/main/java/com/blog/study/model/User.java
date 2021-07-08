@@ -1,6 +1,5 @@
 package com.blog.study.model;
 
-import com.blog.study.annotation.MyAnnotation;
 import lombok.Data;
 
 /**
@@ -14,7 +13,6 @@ import lombok.Data;
 @Data
 public class User {
 
-    @MyAnnotation
     private String userName;
 
 

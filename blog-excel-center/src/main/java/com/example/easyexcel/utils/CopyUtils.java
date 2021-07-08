@@ -1,7 +1,7 @@
 package com.example.easyexcel.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.google.common.collect.Lists;
+import org.assertj.core.util.Lists;
 import org.springframework.beans.BeanUtils;
 
 import java.util.Collection;
